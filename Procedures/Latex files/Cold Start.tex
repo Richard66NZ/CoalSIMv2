@@ -1,0 +1,231 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xfrac}
+\usepackage[version=3]{mhchem}
+\usepackage{capt-of}
+\usepackage[final]{pdfpages}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{wallpaper}
+
+\usepackage{geometry}
+\usepackage{pdflscape}
+\usepackage[final]{pdfpages}
+
+\author{Richard J Smith\\richardsmith@asia.com}
+\setlength{\parindent}{0cm}
+\date{1 July 2014}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\begin{document}
+
+\pagenumbering{gobble}
+\title{}
+%\includepdf{images/cover.pdf}
+%\maketitle
+
+\newgeometry{top=1cm, bottom=1cm, left=2.5cm}
+
+%{table}[]
+\begin{spacing}{2}
+\begin{tabular}{|L{3.5cm}|L{3.5cm}|L{3.5cm}|L{3.5cm}|}
+\hline
+\multicolumn{2}{|l|}{ACME Procedure}                                        & \multicolumn{2}{r|}{OPS-0001-B}           \\ \hline
+Title:                                                          & \multicolumn{3}{c|}{{\large \textbf{ACME Unit 1 Cold Start procedure}}}                   \\ \hline
+Author:                                                         & R.J.Smith          & Authorised by:          & {\hspace*{0.5cm}\parbox[c]{1em}{\includegraphics[width=2cm]{images/hancocksig.jpg}}}                  \\ \hline
+Review Date:                                                    & 1 January 2027       & Date Authorised:        & 17 March 2025       \\ \hline
+\begin{tabular}[c]{@{}l@{}}Associated\\ Documents:\end{tabular} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}} None  \\
+\end{tabular}} \\ \hline
+\end{tabular}
+\end{spacing}
+%\end{table}
+
+%\begin{table}[]
+\begin{spacing}{1.5}
+\begin{tabular}{|C{1.2cm}|C{2.2cm}|C{2.2cm}|C{2.2cm}|C{3.3cm}|C{2cm}|}
+\hline
+Rev & Date        & Author      & \begin{tabular}[c]{@{}c@{}}Authorised\\ By\end{tabular} & Modification & Status \\ \hline
+A   & 1 Jan 2025 & R.J.Smith & J. Hancock                                              & First draft  & Draft  \\ \hline
+B   & 17 Mar 2025 & R.J.Smith & J.Hancock                                           & Finalised  & Issued  \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+\end{tabular}
+\end{spacing}
+%\end{table}
+
+
+%\tableofcontents
+
+%\restoregeometry
+
+%\pagebreak
+
+%\ULCornerWallPaper{1}{images/TopHeader.jpg}
+%\LLCornerWallPaper{1}{images/BottomHeader.jpg}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section*{Summary}
+This procedure provides a step by step instruction for ACME Power Unit 1 start up from cold conditions. It shall be used as a reference each time this plant is started and a record kept of plant start up progress and any issues, events or error for future improvements.\\
+\\
+On ACME Power Unit 1, a cold start is one in which the steam turbine rotor temperature as measured at thermocouple 1MAB10CT005 is $<$250 deg C.
+
+\section*{Cold Start}\label{proc:coldstart}
+The main outline of a cold start is as follows;
+\begin{list}{$\bullet$}{}
+\item Start the plant auxiliary systems.
+\item Put the turbine on turning gear.
+\item Fill the deaerator and steam drum with water.
+\item Start the gland steam system and pull a vacuum in the condenser.
+\item Start boiler fans and purge the boiler.
+\item Light off the fuel oil burner.
+\item Increase boiler steam temperature, pressure and flow until matching the steam turbine requirements.
+\item Run up the steam turbine to 3000 rpm.
+\item Synchronise the generator.
+\item Select Turbine follow mode.
+\item Start coal pulverisers to increase unit load.
+\end{list}
+
+A step by step procedure so as to accomplish a cold start is below and this should be followed as closely as possible to achieve the best possible score.
+\begin{enumerate}
+\item CLOSE circuit breaker 1ADA10GS001 to backfeed power to 11kV electrical board 1BBA10 (0AEA10GH001 ON).
+\item CLOSE circuit breaker 1BFB10GS023 to supply power to Water Treatment Demin Plant. Plant will auto start and produce demineralised water (0GCF10GH001 ON).
+\item START demin forwarding pump 0GCF10AP001.
+\item START closed cooling water (CCW) system (1PGA10AP001 ON). Note: this will start the demin circulating pump (1PGA10AP001), start the first of 24 cooling fans (1PGA10AN001), place the cooling fan start/stop control to automatic and place the CCW system filling valve (1GHC10AA201) to automatic.
+\item START plant instrument air system (0SCA10AN001 ON). Note: this will take a few seconds to reach normal IA system pressure.
+\item START plant fuel oil supply system (0EGC10AP001 ON). Note: this will start the fuel oil forwarding pump (0EGC10AP001) and once discharge pressure has reached a certain valve select pressure control valve (0EGC10AA251) to automatic control.
+\item START the auxiliary boiler (0QHA10GH001 ON). Note: this will start the auxiliary boiler forced draught fan (0HAE10AN001), open fuel valve (0EGD65AA251) and ignite the burner. Once boiler pressure is sufficient the boiler main stop valve (0LBG10AA001) will open.
+\item START turbine lube oil and place turning gear in operation;
+\begin{enumerate}
+\item START turbine lube oil pump (1MAV10AP001 ON)
+\item START turbine jacking oil pump (1MAV20AP001 ON)
+\item START turbine turning gear (1MAK10AE001 ON). Note: turning gear motor will engage to turbine shaft and increase turbine rotor to approx. 30 rpm 
+\end{enumerate}
+\item START condensate extraction system;
+\begin{enumerate}
+\item START condensate extraction pump (1LCB10AP001 ON). Note: pump (1LCB10AP001) will start and minimum flow valve (1LCB12AA001) will open to ensure an adequate flow through the pump to prevent damage.
+\item SELECT condensate extraction pump controller to AUTO (LCB (CEP-AUTO)). Note: this will fill deaerator (1LAA10BB001) to a level of approx. 2100mm. The flow control valve (1LCA10AA251) will operate on auto to control this level. The hotwell filling valve (1GHC10AA301) will also operate in auto to ensure adequate water level in condenser hotwell.
+\end{enumerate}
+\item START feedwater system;
+\begin{enumerate}
+\item START feedwater pump (1LAC10AP001 ON). Note: pump (1LAC10AP001) will start and minimum flow valve (1LAC12AA001) will open to ensure an adequate flow through the pump to prevent damage.
+\item SELECT feedwater pump controller to AUTO (LAC (FWP-AUTO)). Note: this will fill steam drum (1HAE10BB001) to its normal working 0mm. The flow control valve (1LAB10AA251) will operate on auto to control this level. 
+\end{enumerate}
+
+\item START condenser cooling water pump (1PAB10AP001 ON).
+\item START gland steam system;
+\begin{enumerate}
+\item SELECT gland steam CONTROL VALVE (1MAW10AA251) to AUTO. Note: if steam supply from either auxiliary boiler (0LBH10AA001) or boiler main steam (1LBA50AA001) is available then gland steam supply valve (1MAW10AA251) will change to auto control and increase the gland steam pressure (1MAW20CP001) up to its setpoint of approx. 350 mbar. Gland steam exhauster fan (1MAW10AN001) will also start at this time.
+\end{enumerate}
+
+\item START condenser vacuum pump (1MAJ10AP001 ON). Note: this will cause the condenser vacuum breaker valve (1MAG10AA401) to close and slowly reduce condenser pressure down to it normal operating pressure. Approx. 50 mbar.
+\item START furnace fans;
+\begin{enumerate}
+\item START air heater (1HLD10AC001 ON). Air heater speed should be around 3 rpm.
+\item START induced draught fan (1HNC10AN001 ON).
+\item START forced draught fan (1HLB10AN001 ON).
+\item SELECT forced draught fan controller to AUTO. Note: this will cause ID and FD fans to increase in load until boiler airflow is around 30\%.
+\end{enumerate}
+
+\item PURGE the furnace (PURGE button). Note: this will cause the ID and FD fans to increase in load to $>$40\% and start the purge counter. Once the purge counter has reached zero the furnace fan loading will return to previous values. At the end of furnace purge (20 seconds with boiler airflow $>$40\%) the boiler TRIP signal is reset.
+\item START fuel oil burner (1HHA10AV001 ON). Note: once fuel oil burner flame is lit, the burner can be controlled by adjusting the controller (1HHA10CQ001). Increase this controller slowly to raise boiler pressure and temperature, however be mindful of boiler limits on rate of increase for these values.
+\item As boiler steam pressure and temperature rise the following will occur in succession;
+\begin{enumerate}
+\item steam drum vent valve (1HAE15AA001) will CLOSE when pressure $>$1.5 bar.
+\item boiler startup vent valve (skyvent 1LBH10AA151) will OPEN when boiler pressure $>$2 bar to ensure adequate steam flow through boiler superheater section to prevent overheating.
+\item boiler main stop valve (1LBH20AA101) will OPEN to pressurise the steam legs. Note: this will be prevented if condenser vacuum is too high.
+\item steam leg drain valve (1LBA50AA501) will OPEN to drain any accumulated water in these pipes.
+\item turbine bypass valve (1MAN20AA251) will OPEN and control in automatic to keep boiler pressure at approx. 90 bar. Boiler start up vent valve (skyvent 1LBH10AA151) will CLOSE.
+\item at a steam leg pressure of $>$10 bar the steam leg drain valve (1LBA50AA501) will CLOSE.
+\item at a steam leg pressure of $>$20 bar the steam supply valve to gland steam (1LBA50AA001) will OPEN.
+\end{enumerate}
+\item Once gland steam in available from main steam (1LBA50AA001), the auxiliary boiler can be shut down (0QHA10GH001 OFF).
+\item When the following turbine steam inlet condition are met the turbine can be started;
+\begin{enumerate}
+\item main steam temperature (1LBA60CT001) 400$\pm$20 deg C.
+\item main steam pressure (1LBA60CP001) 90$\pm10$ bar.
+\item main steam flow rate (1LBA50CF001) $>$15 kg/s. Note: if steam flow rate is too low, increase fuel oil burner controller (1HHA10CQ001) slowly to 100\%. 
+\end{enumerate}
+
+\item START turbine control oil pump (1MAX10AP001 ON).
+\item RESET turbine trip. Note: turbine ESV valve (1MAB10AA001) will open to 100\% and CV valve (1MAB10AA002) will open sufficient to accelerate turbine rotor to 3000rpm.
+\item As the turbine rotor speed increases the following will occur in succession;
+\begin{enumerate}
+\item turbine turning gear will disengage as turbine rotor speed increases above 34 rpm.
+\item turbine turning gear motor will STOP when rotor speed is $>$990 rpm.
+\item turbine jacking oil pump (1MAV20AP001) will STOP when rotor speed is $>$1080rpm.
+\item turbine rotor will travel through its critical speed around 2600 rpm. Pay close attention to rotor vibrations during this time.
+\item generator excitation will auto ON at a turbine speed $>$2940 rpm.
+\item turbine rotor will reach and stabilise at 3000 rpm.
+\item generator Auto Synchronising will ON after a short time delay.
+\item once generator synchronising circuit breaker (1MKA10GS001) has closed, turbine CV valve (1MAB10AA002) will open sufficiently to load turbine to minimum continuous load of approx. 15 MW (gross).
+\end{enumerate}
+
+\item SELECT Turbine CTRL mode to "Turbine MW AUTO". Note: turbine bypass valve (1MAN20AA251) will drive close which will cause turbine CV (1MAB10AA002) to open slightly and turbine MW (1MAB50CE001) to increase. Once turbine bypass valve (1MAN20AA251) is fully CLOSED steam turbine will be in TURBINE FOLLOW mode (this means any change in boiler fuel flow will directly result in a change in turbine output).
+\item START primary air fan (1HFE10AN001 ON). Note: starting of primary air fan (1HFE10AN001) is only possible once furnabce backpass temperature (1HNA50CT001) is $>$250 deg C. Once primary air duct pressure (1HFE20CP001) is $>$150 mbar it will be possible to start a coal pulveriser.
+\item START coal pulveriser B (1HFC20AV001 ON). Note: pulveriser B coal flow controller (1HFB20CQ001) will automatically go to 16 t/hour coal flow.
+\item START electrostatic precipitator (1HDE10AT001 ON). Note: ESP will not start if fuel oil flow is $>$20\%. Reduce fuel oil firing if necessary.
+\item INCREASE pulveriser B coal flow controller (1HFB20CQ001) to 20 t/hr.
+\item START coal pulveriser A (1HFC10AV001 ON). Note: pulveriser A coal flow controller (1HFB10CQ001) will automatically go to 16 t/hour coal flow.
+\item STOP fuel oil burner (1HHA10AV001 OFF).
+\item INCREASE pulveriser A and pulveriser B coal flow controller (1HFB10CQ001 and 1HFB20CQ001) to 40 t/hr each. This should be done slowly whilst being mindful of boiler limits on rate of increase for pressure and temperature.
+\item ADJUST furnace burner tilt angle (1HFD10GF001a) to ensure superheater outlet temperature (1LBA30CT001) does not exceed design values (design = 540 deg C; alarm = 545 deg C; trip = 555 deg C).
+\item STOP plant fuel oil supply system (0EGC10AP001 OFF).
+\item Increase boiler fuel firing until unit full load (approx. 150 MW gross) is reached.
+\end{enumerate}
+
+
+\vspace*{2cm}
+
+
+\begin{center}
+\setlength{\fboxrule}{0.5mm}
+   \fcolorbox{black}{yellow}{
+         \begin{minipage}[t]{0.85\textwidth}
+\begin{center}
+\vspace*{0.5cm}
+\textbf{Disclaimer}
+\end{center}
+
+This document is provided by Richard J Smith 'as is' and 'with all faults'. The provider makes no representations or warranties of any kind concerning the safety, suitability, inaccuracies, typographical errors, or other harmful components of this document and software.\\
+\\
+The sole purpose of this document is to provide a guide to the accompanying application.\\
+\begin{center}
+Use the information contained at your own risk.
+\vspace*{0.5cm}    
+\end{center}
+         \end{minipage}
+      }
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
