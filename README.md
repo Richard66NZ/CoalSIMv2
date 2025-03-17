@@ -5,7 +5,8 @@ Simulation of Coal Fired power generation unit (Version 2)
 
 This simulation represents a rather basic model of a 150MW (gross)
 single unit superheated Rankine cycle power plant with a pulverised fuel
-coal fired boiler.\
+coal fired boiler.It is not meant as a complete simulator training system, 
+but just as a proof of concept of what is possible.\
 \
 The aim is to perform a cold start of the boiler and turbine and once
 synchronised to the electrical grid increase load to the unit maximum of
