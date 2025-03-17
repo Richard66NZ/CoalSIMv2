@@ -1,0 +1,180 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xfrac}
+\usepackage[version=3]{mhchem}
+\usepackage{capt-of}
+\usepackage[final]{pdfpages}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{wallpaper}
+
+\usepackage{geometry}
+\usepackage{pdflscape}
+\usepackage[final]{pdfpages}
+
+\author{Richard J Smith\\richardsmith@asia.com}
+\setlength{\parindent}{0cm}
+\date{1 July 2014}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\begin{document}
+
+\pagenumbering{gobble}
+\title{}
+%\includepdf{images/cover.pdf}
+%\maketitle
+
+\newgeometry{top=1cm, bottom=1cm, left=2.5cm}
+
+%{table}[]
+\begin{spacing}{2}
+\begin{tabular}{|L{3.5cm}|L{3.5cm}|L{3.5cm}|L{3.5cm}|}
+\hline
+\multicolumn{2}{|l|}{ACME Procedure}                                        & \multicolumn{2}{r|}{OPS-0003-B}           \\ \hline
+Title:                                                          & \multicolumn{3}{c|}{{\large \textbf{ACME Unit 1 Hot Start procedure}}}                   \\ \hline
+Author:                                                         & R.J.Smith          & Authorised by:          & {\hspace*{0.5cm}\parbox[c]{1em}{\includegraphics[width=2cm]{images/hancocksig.jpg}}}                  \\ \hline
+Review Date:                                                    & 1 January 2027       & Date Authorised:        & 17 March 2025       \\ \hline
+\begin{tabular}[c]{@{}l@{}}Associated\\ Documents:\end{tabular} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}} None  \\
+\end{tabular}} \\ \hline
+\end{tabular}
+\end{spacing}
+%\end{table}
+
+%\begin{table}[]
+\begin{spacing}{1.5}
+\begin{tabular}{|C{1.2cm}|C{2.2cm}|C{2.2cm}|C{2.2cm}|C{3.3cm}|C{2cm}|}
+\hline
+Rev & Date        & Author      & \begin{tabular}[c]{@{}c@{}}Authorised\\ By\end{tabular} & Modification & Status \\ \hline
+A   & 1 Jan 2025 & R.J.Smith & J. Hancock                                              & First draft  & Draft  \\ \hline
+B   & 17 Mar 2025 & R.J.Smith & J.Hancock                                           & Finalised  & Issued  \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+\end{tabular}
+\end{spacing}
+%\end{table}
+
+
+%\tableofcontents
+
+%\restoregeometry
+
+%\pagebreak
+
+%\ULCornerWallPaper{1}{images/TopHeader.jpg}
+%\LLCornerWallPaper{1}{images/BottomHeader.jpg}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section*{Summary}
+This procedure provides a step by step instruction for ACME Power Unit 1 start up from hot conditions. It shall be used as a reference each time this plant is started and a record kept of plant start up progress and any issues, events or error for future improvements.\\
+\\
+On ACME Power Unit 1, a hot start is one in which the steam turbine rotor temperature as measured at thermocouple 1MAB10CT005 is $>$450 deg C.
+
+\section*{Hot Start}\label{proc:hotstart}
+The main differences compared to a warm start are;
+\begin{list}{$\bullet$}{}
+\item Need evener higher steam temperature, pressure and flow from the boiler to match the steam turbine requirements.
+\item You may require to start a coal pulveriser before running up the steam turbine to achieve these temperature requirements.
+\end{list}
+
+A step by step procedure so as to accomplish a hot start is below and this should be followed as closely as possible to achieve the best possible score.
+\begin{enumerate}
+\item CHECK circuit breaker 1ADA10GS001 to backfeed power to 11kV electrical board 1BBA10 (0AEA10GH001 ON).
+\item CHECK plant fuel oil supply system (0EGC10AP001 ON).
+\item CHECK gland steam supply is available. If not then START the auxiliary boiler (0QHA10GH001 ON).
+\item CHECK turbine lube oil pump (1MAV10AP001 ON).
+\item CHECK turbine jacking oil pump (1MAV20AP001 ON).
+\item CHECK turbine turning gear (1MAK10AE001 ON).
+\item CHECK condensate extraction pump (1LCB10AP001 ON).
+\item CHECK condensate extraction pump controller in AUTO (LCB (CEP-AUTO)). 
+\item CHECK feedwater pump (1LAC10AP001 ON).
+\item CHECK feedwater pump controller in AUTO (LAC (FWP-AUTO)). 
+\item CHECK condenser cooling water pump (1PAB10AP001 ON).
+\item CHECK gland steam system (1MAW10GH001 ON).
+\item CHECK condenser vacuum pump (1MAJ10AP001 ON).
+\item START furnace fans;
+\begin{enumerate}
+\item CHECK air heater (1HLD10AC001 ON). Air heater speed should be around 3 rpm.
+\item START induced draught fan (1HNC10AN001 ON).
+\item START forced draught fan (1HLB10AN001 ON).
+\item SELECT furnace air flow controller (AirFlow (AUTO)) to automatic.
+\end{enumerate}
+\item PURGE the furnace (PURGE button).
+\item START fuel oil burner (1HHA10AV001 ON). 
+\item START primary air fan (1HFE10AN001 ON). 
+\item START coal pulveriser B (1HFC20AV001 ON). 
+\item START electrostatic precipitator (1HDE10AT001 ON). 
+\item ADJUST furnace burner tilt angle (1HFD10GF001a) to ensure superheater outlet temperature (1LBA30CT001) is 460 deg C $\pm$20.
+\item CHECK turbine bypass valve (1MAN20AA251) will OPEN after a short period.
+\item When the following turbine steam inlet condition are met the turbine can be started;
+\begin{enumerate}
+\item main steam temperature (1LBA60CT001) 460$\pm$20 deg C.
+\item main steam pressure (1LBA60CP001) 120$\pm10$ bar.
+\item main steam flow rate (1LBA50CF001) $\approx$25 kg/s. 
+\end{enumerate}
+\item CHECK turbine control oil pump (1MAX10AP001 ON).
+\item RESET turbine trip.
+\item CHECK generator synchronising circuit breaker (1MKA10GS001) has closed.
+\item CHECK turbine load increases to minimum continuous load of approx. 15 MW (gross).
+\item SELECT Turbine CTRL mode to "Turbine MW AUTO". 
+\item INCREASE pulveriser B coal flow controller (1HFB20CQ001) to 20 t/hr.
+\item START coal pulveriser A (1HFC10AV001 ON). 
+\item STOP fuel oil burner (1HHA10AV001 OFF).
+\item INCREASE pulveriser A and pulveriser B coal flow controller (1HFB10CQ001 and 1HFB20CQ001) to 40 t/hr each. This should be done slowly whilst being mindful of boiler limits on rate of increase for pressure and temperature.
+\item ADJUST furnace burner tilt angle (1HFD10GF001a) to ensure superheater outlet temperature (1LBA30CT001) does not exceed design values (design = 540 deg C; alarm = 545 deg C; trip = 555 deg C).
+\item STOP plant fuel oil supply system (0EGC10AP001 OFF).
+\item Increase boiler fuel firing until unit full load (approx. 150 MW gross) is reached.
+\end{enumerate}
+
+
+\vspace*{2cm}
+
+\begin{center}
+\setlength{\fboxrule}{0.5mm}
+   \fcolorbox{black}{yellow}{
+         \begin{minipage}[t]{0.95\textwidth}
+\begin{center}
+\vspace*{0.5cm}
+\textbf{Disclaimer}
+\end{center}
+
+This document is provided by Richard J Smith 'as is' and 'with all faults'. The provider makes no representations or warranties of any kind concerning the safety, suitability, inaccuracies, typographical errors, or other harmful components of this document and software.\\
+\\
+The sole purpose of this document is to provide a guide to the accompanying application.\\
+\begin{center}
+Use the information contained at your own risk.
+\vspace*{0.5cm}    
+\end{center}
+         \end{minipage}
+      }
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+

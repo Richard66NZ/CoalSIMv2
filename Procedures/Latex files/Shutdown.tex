@@ -1,0 +1,173 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xfrac}
+\usepackage[version=3]{mhchem}
+\usepackage{capt-of}
+\usepackage[final]{pdfpages}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{wallpaper}
+
+\usepackage{geometry}
+\usepackage{pdflscape}
+\usepackage[final]{pdfpages}
+
+\author{Richard J Smith\\richardsmith@asia.com}
+\setlength{\parindent}{0cm}
+\date{1 July 2014}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\begin{document}
+
+\pagenumbering{gobble}
+\title{}
+%\includepdf{images/cover.pdf}
+%\maketitle
+
+\newgeometry{top=1cm, bottom=1cm, left=2.5cm}
+
+%{table}[]
+\begin{spacing}{2}
+\begin{tabular}{|L{3.5cm}|L{3.5cm}|L{3.5cm}|L{3.5cm}|}
+\hline
+\multicolumn{2}{|l|}{ACME Procedure}                                        & \multicolumn{2}{r|}{OPS-0004-B}           \\ \hline
+Title:                                                          & \multicolumn{3}{c|}{{\large \textbf{ACME Unit 1 Shut down procedure}}}                   \\ \hline
+Author:                                                         & R.J.Smith          & Authorised by:          & {\hspace*{0.5cm}\parbox[c]{1em}{\includegraphics[width=2cm]{images/hancocksig.jpg}}}                  \\ \hline
+Review Date:                                                    & 1 January 2027       & Date Authorised:        & 17 March 2025       \\ \hline
+\begin{tabular}[c]{@{}l@{}}Associated\\ Documents:\end{tabular} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}} None  \\
+\end{tabular}} \\ \hline
+\end{tabular}
+\end{spacing}
+%\end{table}
+
+%\begin{table}[]
+\begin{spacing}{1.5}
+\begin{tabular}{|C{1.2cm}|C{2.2cm}|C{2.2cm}|C{2.2cm}|C{3.3cm}|C{2cm}|}
+\hline
+Rev & Date        & Author      & \begin{tabular}[c]{@{}c@{}}Authorised\\ By\end{tabular} & Modification & Status \\ \hline
+A   & 1 Jan 2025 & R.J.Smith & J. Hancock                                              & First draft  & Draft  \\ \hline
+B   & 17 Mar 2025 & R.J.Smith & J.Hancock                                           & Finalised  & Issued  \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+    &             &             &                                                         &              &        \\ \hline
+\end{tabular}
+\end{spacing}
+%\end{table}
+
+
+%\tableofcontents
+
+%\restoregeometry
+
+%\pagebreak
+
+%\ULCornerWallPaper{1}{images/TopHeader.jpg}
+%\LLCornerWallPaper{1}{images/BottomHeader.jpg}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section*{Summary}
+This procedure provides a step by step instruction for ACME Power Unit 1 shut down. It shall be used as a reference each time this plant is started and a record kept of plant start up progress and any issues, events or error for future improvements.
+
+\section*{Shutdown (normal)}
+\begin{enumerate}
+\item REDUCE pulveriser A and pulveriser B coal flow controller (1HFB10CQ001 and 1HFB20CQ001) to 20 t/hr each. This should be done slowly whilst observing the generator MW output (1MAB50CE001).
+\item START plant fuel oil supply system (0EGC10AP001 ON). Note: this will start the fuel oil forwarding pump (0EGC10AP001) and once discharge pressure has reached a certain valve select pressure control valve (0EGC10AA251) to automatic control.
+\item START fuel oil burner (1HHA10AV001 ON). Note: once fuel oil burner flame is lit, the burner can be controlled by adjusting the controller (1HHA10CQ001). For now leave controller at 10\%.
+\item REDUCE pulveriser A coal flow controller (1HFB10CQ001) to 10 t/hr.
+\item STOP pulveriser A (1HFC10AV001 OFF).
+\item REDUCE pulveriser B coal flow controller (1HFB20CQ001) to 10 t/hr.
+\item STOP pulveriser B (1HFC20AV001 OFF).
+\item STOP electrostatic precipitator (1HDE10AT001 OFF)
+\item MONITOR generator MW output (1MAB50CE001) as it reduces. 
+\item MONITOR when MW output (1AMB50CE001) is below zero the turbine will TRIP on REVERSE POWER (code - 10017).
+\item As the turbine rotor speed decreases the following will occur in succession;
+\begin{enumerate}
+\item turbine jacking oil pump (1MAV20AP001) will START when rotor speed is $<$1500 rpm.
+\item turbine turning gear motor will START when rotor speed is $<$500 rpm.
+\item turbine turning gear will ENGAGE as turbine rotor speed is $<$2 rpm.
+\end{enumerate}
+\item STOP fuel oil burner (1HHA10AV001 OFF). Note: this will result in a boiler TRIP.
+
+\item RESET generator circuit breaker (1MKA10GS001) reverse power relay.
+\item If immediate restart is not planned then continue;
+\begin{enumerate}
+\item STOP condenser vacuum pump (1MAJ10AP001 OFF). Note: this will stop the condenser vacuum pump (1MAJ10AP001) and open the condenser vacuum breaker valve (1MAG10AA401) and vacuum will quickly dissipate.
+\item STOP gland steam system (1MAW10GH001 OFF). Note: gland steam control valve (1MAW10AA251) will CLOSE and gland steam exhauster fan (1MAW10AN001) will STOP. Gland steam pressure (1MAW20CP001) will reduce slowly to 0 mbar.
+
+\item SELECT furnace air flow controller (AirFlow (AUTO)) to manual. Note: this will cause ID and FD fans to decrease in load until boiler airflow is 0\%.
+\item STOP forced draught fan (1HLB10AN001 OFF).
+\item STOP induced draught fan (1HNC10AN001 OFF).
+
+\item STOP plant fuel oil supply system (0EGC10AP001 OFF).
+\item STOP turbine control oil pump (1MAX10AP001 OFF).
+\item STOP condenser cooling water pump (1PAB10AP001 OFF).
+\item SELECT steam drum filing to manual (LAC (FWP-AUTO)).
+\item STOP feedwater pump (1LAC10AP001 OFF).
+\item SELECT deaerator filling to manual (LCB (CEP-AUTO)).
+\item STOP condensate extraction pump (1LCB10AP001 OFF).
+\end{enumerate}
+\item If however you plan to restart the turbine immediately or after a short time period please go directly to the Warm or Hot start procedure.
+\item If turbine rotor metal temperature (1MAB50CT005) is $<$120 deg C;
+\begin{enumerate}
+\item STOP turbine turning gear (1MAK10AE001 OFF).
+\item STOP turbine jacking oil pump (1MAV20AP001 OFF). Note: turbine speed must be $<$2 rpm.
+\item STOP turbine lube oil pump (1MAV10AP001 OFF).
+\end{enumerate}
+\item If Boiler back pass temperature (1HNA50CT001)) is $<$120 deg C; 
+\begin{enumerate}
+\item STOP rotary airheater (1HLD10AC001).
+\end{enumerate}
+\end{enumerate}
+
+
+\vspace*{2cm}
+
+\begin{center}
+\setlength{\fboxrule}{0.5mm}
+   \fcolorbox{black}{yellow}{
+         \begin{minipage}[t]{0.95\textwidth}
+\begin{center}
+\vspace*{0.5cm}
+\textbf{Disclaimer}
+\end{center}
+
+This document is provided by Richard J Smith 'as is' and 'with all faults'. The provider makes no representations or warranties of any kind concerning the safety, suitability, inaccuracies, typographical errors, or other harmful components of this document and software.\\
+\\
+The sole purpose of this document is to provide a guide to the accompanying application.\\
+\begin{center}
+Use the information contained at your own risk.
+\vspace*{0.5cm}    
+\end{center}
+         \end{minipage}
+      }
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
