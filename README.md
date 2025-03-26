@@ -17,4 +17,4 @@ achieve a perfect score of 100% may require a few attempts.
 
 ![Opening Screen view](/Screenshots/About.png)
 
-Updated 2025 application coming soon!
+Updated 2025 application uploaded 26 March 2025 - give it a try (macOS ARM only).
