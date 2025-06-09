@@ -15,6 +15,6 @@ performance, taking into account the fuel usage, auxiliary power
 consumption and any environmental limits that have been exceeded. To
 achieve a perfect score of 100% may require a few attempts.
 
-![Opening Screen view](/Screenshots/About.png)
+![Opening Screen view](/Screenshots/OpeningScreen.png)
 
-Updated 2025 application uploaded 26 March 2025 - give it a try (macOS ARM only).
+Updated 2025 application uploaded 9 June 2025 - give it a try (macOS only).
